@@ -1,0 +1,11 @@
+<h1><%= @guest.name %></h1>
+
+<p><%= @guest.email %></p>
+
+<ul>
+  <%= link_to "Edit", edit_guest_path(@guest) %>
+  <%= link_to "Destroy", guest_path(@guest), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %>
+</ul>
